@@ -1,0 +1,179 @@
+@import "../../var.scss";
+page {
+  background-color: #f5f6f7;
+}
+.headerContainer {
+  position: fixed;
+  top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 $pagePadding;
+  box-sizing: border-box;
+  z-index: -10;
+  .headerTextContainer {
+    line-height: 42px;
+    width: 400px;
+    .headerTitle {
+      @include textSingleEllipsis;
+      font-size: 30px;
+      &::after {
+        content: "(24小时营业)";
+        font-size: 24px;
+      }
+    }
+    .headerPlace {
+      @include textSingleEllipsis;
+      font-size: 24px;
+      color: #999999;
+    }
+  }
+  .headerMapAndPhone {
+    display: flex;
+    .headerLogo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background-color: #fff;
+      margin-left: 15px;
+    }
+  }
+}
+.orderContainer {
+  border-radius: 30px;
+  background-color: #fff;
+  padding: $pagePadding;
+  text-align: center;
+  margin-top: 122px;
+  margin-bottom: 10px;
+  .swiper {
+    .swiperItem {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .orderTitle {
+    margin-top: 40px;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .orderInfo {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #999999;
+  }
+  .orderBtn {
+    width: 350px;
+    margin-bottom: 20px;
+    color: #fff;
+    background-image: linear-gradient(
+      to right,
+      #4568dc 0%,
+      #b06ab3 51%,
+      #4568dc 100%
+    );
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+  }
+  .navContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .navItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // width: 20%;
+      font-size: 24px;
+      &:first-child .iconfont {
+        background-image: linear-gradient(
+          to right,
+          #4cb8c4 0%,
+          #3cd3ad 51%,
+          #4cb8c4 100%
+        );
+      }
+      &:nth-child(2) .iconfont {
+        background-image: linear-gradient(
+          to right,
+          #ff512f 0%,
+          #dd2476 51%,
+          #ff512f 100%
+        );
+      }
+      &:nth-child(3) .iconfont {
+        background-image: linear-gradient(
+          to right,
+          #f0c27b 0%,
+          #4b1248 51%,
+          #f0c27b 100%
+        );
+      }
+      &:nth-child(4) .iconfont {
+        background-image: linear-gradient(
+          to right,
+          #f7971e 0%,
+          #ffd200 51%,
+          #f7971e 100%
+        );
+      }
+      &:nth-child(5) .iconfont {
+        background-image: linear-gradient(
+          to right,
+          #c0392b 0%,
+          #8e44ad 51%,
+          #c0392b 100%
+        );
+      }
+      .iconfont {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        background-size: 200% auto;
+        font-size: 50px;
+        color: #fff;
+        margin: 20px 0;
+      }
+    }
+  }
+}
+.footerContainer {
+  background-color: #fff;
+  padding: $pagePadding;
+  .footerInfoTitle {
+    display: inline-block;
+    line-height: 1;
+    font-weight: bold;
+    position: relative;
+    padding-left: 12px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      width: 6px;
+      height: 100%;
+      background-color: #4078ff;
+    }
+    &::after {
+      content: "Steps of experience";
+      font-size: 22px;
+      margin-left: 12px;
+      color: #dddddd;
+      font-weight: 500;
+    }
+  }
+  .footerInfoImage {
+    margin-top: 25px;
+    width: 100%;
+    background-color: #ccc;
+  }
+}

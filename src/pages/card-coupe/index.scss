@@ -1,0 +1,219 @@
+@import "../../var.scss";
+
+page {
+  overflow: hidden;
+  box-sizing: border-box;
+  view {
+    box-sizing: border-box;
+  }
+}
+
+.navHeader {
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  .coupeTabs {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    display: flex;
+    .coupeTabItem {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 32px;
+      padding: 20px;
+      flex: 1;
+      .coupeTabItemLine {
+        position: absolute;
+        bottom: 0;
+        width: 50px;
+        height: 6px;
+        border-radius: 2px;
+        background-color: #4078ff;
+        transform: scale(0);
+        transition: all 500ms;
+      }
+      .coupeTabItemLineActive {
+        transform: scale(1);
+      }
+    }
+    .coupeTabItemActive {
+      color: black;
+    }
+  }
+}
+.CardCoupeScroll {
+  background-color: #f5f6f7;
+}
+.CoupeRechargeScroll {
+  background-color: #fff;
+}
+.CoupeExchangeScroll {
+  background-color: #fff;
+}
+.cardCoupeContainer {
+  padding: 32px;
+  .myBalance {
+    height: 130px;
+    padding: 30px;
+    background-image: linear-gradient(
+      to right,
+      #4ca1af 0%,
+      #c4e0e5 51%,
+      #4ca1af 100%
+    );
+    background-size: 200% auto;
+    border-radius: 20px;
+    color: #fff;
+    margin-bottom: 80px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+    .balanceSeparator {
+      display: inline-block;
+      vertical-align: middle;
+      width: 1px;
+      height: 26px;
+      transform: scale(0.5, 1);
+      background-color: #fff;
+    }
+    .balanceInfo {
+      font-size: 26px;
+      line-height: 50px;
+      padding-left: 20px;
+      font-weight: normal;
+    }
+  }
+  .rechargeContainer {
+    .rechargeTitle {
+      font-weight: bold;
+    }
+    .rechargeCardContainer {
+      margin-top: 30px;
+      margin-bottom: 60px;
+      overflow: hidden;
+    }
+    .rechargeCard {
+      box-sizing: content-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 26px 28px;
+      border-radius: 3px;
+      border: 2px solid #f6f6f6;
+      margin-right: 20px;
+      border-radius: 10px;
+      .rechargeCardText{
+        color: #999999;
+        font-size: 24px;
+      }
+    }
+    .rechargeCardActive {
+      border-color: #4078ff;
+      background-color: #f4f7ff;
+      color: #4078ff;
+    }
+    .rechargeInfo{
+      view:first-child{
+        color: black;
+        font-size: 24px;
+      }
+      overflow: hidden;
+      margin-top: 30px;
+      font-size: 22px;
+      color: #c4c4c4;
+      line-height: 1.8;
+    }
+  }
+  .test {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .exchangeBgc {
+    width: 100%;
+    height: 200px;
+    margin-top: 80px;
+    overflow: hidden;
+    background-image: url("../../assets/images/bgc/tuangou2.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .exchangeTitle {
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .exchangeBtn {
+    margin: 40px 0 60px 0;
+  }
+  .exchangeInput {
+    border-bottom: 1px solid #f5f5f5;
+    .icon-saoma {
+      position: absolute;
+      padding: 12px;
+      right: 10px;
+      font-size: 32px;
+    }
+  }
+  .exchangeInfo {
+    overflow: hidden;
+    color: #666;
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 28px;
+  }
+}
+.cardItemContainer {
+  width: 100%;
+  height: 350px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 50px 50px 30px 50px;
+  background-color: #ccc;
+  background-size: 200% auto;
+  color: #fff;
+  .cardTitle {
+    font-size: 32px;
+    line-height: 1;
+    display: inline-block;
+    margin-bottom: 70px;
+  }
+  .cardUseScope {
+    @include textSingleEllipsis;
+    font-size: 22px;
+    color: #f5f5f5;
+    line-height: 38px;
+  }
+  .cardDivider {
+    margin: 24px 0 30px 0;
+  }
+  .cardPriceContainer {
+    position: relative;
+    line-height: 1;
+    .cardPrice {
+      font-size: 24px;
+    }
+    .cardOriginalPrice {
+      font-size: 22px;
+    }
+    .cardOriginalPriceNumber {
+      font-size: 20px;
+      text-decoration: line-through;
+      color: #f5f5f5;
+    }
+    .icon-xiangyou-jiantou {
+      font-size: 30px;
+      position: absolute;
+      right: 0;
+    }
+  }
+}

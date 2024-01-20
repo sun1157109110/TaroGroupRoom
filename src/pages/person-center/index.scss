@@ -1,0 +1,135 @@
+@import "../../var.scss";
+page {
+  padding: $pagePadding;
+  box-sizing: border-box;
+  background-color: #f5f6f7;
+}
+.personalContainer {
+  .personInfoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .personNameContainer {
+      height: 72px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 30px;
+      .personName {
+        @include textSingleEllipsis;
+      }
+      .personId {
+        @include textSingleEllipsis;
+        font-size: 18px;
+        color: #535a69;
+      }
+    }
+    .personSettings {
+      font-size: 24px;
+      height: 56px;
+    }
+  }
+  .cardAndBalance {
+    display: flex;
+    padding: 50px 0;
+    .cardAndBalanceItem {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      .cardAndBalanceNum {
+        font-size: 34px;
+        font-weight: bold;
+      }
+    }
+  }
+  .applyCardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 20px #eee;
+    .applyCardIcon {
+      .iconfont {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        background: #4b7fff;
+        font-size: 50px;
+        color: #fff;
+        background-image: linear-gradient(
+          to right,
+          #f09819 0%,
+          #edde5d 51%,
+          #f09819 100%
+        );
+        background-size: 200% auto;
+        box-shadow: 0 0 20px #eee;
+      }
+    }
+    .applyCardInfo {
+      height: 72px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 30px;
+      font-size: 27px;
+      .applyCardInfoText {
+        font-size: 23px;
+        color: #999;
+      }
+    }
+    .applyNav {
+      font-size: 28px;
+      color: #999;
+    }
+  }
+  .myToolContainer {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #eee;
+    .myToolTitle {
+      display: inline-block;
+      line-height: 1;
+      position: relative;
+      padding-left: 18px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        width: 6px;
+        height: 100%;
+        background-color: #4078ff;
+      }
+    }
+    .myToolGrid{
+      display: grid;
+      // place-items: center;
+      grid-template-columns: repeat(4, 25%);
+      .myToolGridItem{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        padding-bottom: 30px;
+        .iconfont {
+          padding: 10px;
+          font-size: 50px;
+          color: #4078ff;
+        }
+      }
+    }
+  }
+}

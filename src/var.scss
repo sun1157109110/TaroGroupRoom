@@ -1,0 +1,6 @@
+$pagePadding: 32px;
+@mixin textSingleEllipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
